@@ -84,6 +84,11 @@ mark {
     font-weight: bold;
 }
 
+.b-main {
+    position: relative;
+    background-color: #e8f0f6;
+}
+
 .page-wrapper {
     max-width: 1270px;
     min-width: 630px;
@@ -118,6 +123,7 @@ mark {
 .b-header__logo {
     width: 100%;
     height: 100%;
+    border: none;
 }
 
 .b-header__wrap {
@@ -156,6 +162,10 @@ mark {
     height: 740px;
     background: url(image/main.jpg) no-repeat;
     bottom: 0;
+}
+
+.main--mobile {
+    display: none;
 }
 
 
@@ -220,6 +230,12 @@ mark {
     font-size: 0;
 }
 
+.b-about .b-about__text--wrap {
+    padding: 2% 4% 2% 11%;
+    height: 205px;
+    overflow: hidden;
+}
+
 .b-about__text-wrap {
     padding: 2% 4% 21% 11%;
     transform: skewY(8deg);
@@ -227,7 +243,7 @@ mark {
 }
 
 .b-activity {
-    padding: 36px 0px 139px;
+    padding: 39px 0px 134px;
     background: url(image/bg.jpg) no-repeat;
     background-color: #f7fafc;
 }
@@ -235,6 +251,7 @@ mark {
 .b-activity .b-title {
     padding-top: 0px; 
     letter-spacing: -0.5px;
+    margin-bottom: 26px;
 }
 
 .b-activity .b-text {
@@ -302,6 +319,7 @@ mark {
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .b-icon .b-title--small {
@@ -338,7 +356,7 @@ mark {
     height: 136px;
     display: inline-block;
     transition: 0.4s;
-    margin-bottom: 33px;
+    margin-bottom: 36px;
 }
 
 .b-icon__wrap-image:hover {
@@ -380,14 +398,14 @@ mark {
 .b-slider__wrap {
     text-align: center;
     position: relative;
-    padding: 41px 10%;
+    padding: 46px 10% 48px;
 }
 
 .b-policy {
     background: linear-gradient( 48deg, rgb(0, 131, 186), rgb(0, 88, 152));
     position: relative;
     z-index: 1;
-    padding: 88px 0px 75px;
+    padding: 85px 0px 75px;
 }
 
 .b-policy .b-text {
@@ -447,7 +465,7 @@ mark {
 .b-corporation {
     position: relative;
     background-color: #c0e0ff;
-    padding: 28px 0px 45px;
+    padding: 32px 0px 39px;
 }
 
 .b-corporation:before {
@@ -470,6 +488,10 @@ mark {
     padding-top: 0px;
 }
 
+.b-corporation .b-title--blue {
+    margin-bottom: 26px;
+}
+
 .b-corporation .b-text {
     line-height: 22px;
 }
@@ -487,23 +509,28 @@ mark {
 
 .b-deside .b-text {
     padding-left: 3px;
+    line-height: 22px;
+}
+
+.b-deside .b-text--small {
+    line-height: 19px;
 }
 
 .b-deside .b-about__text-wrap {
-    margin-bottom: 122px;
+    margin-bottom: 115px;
 }
 
 .b-icon__wrap--deside {
     width: 50%;
     text-align: left;
     padding: 0px 20px 0px 53px;
-    margin-bottom: 39px;
+    margin-bottom: 35px;
 }
 
 .b-deside .b-title--blue {
     display: inline-block;
     padding: 0px;
-    margin-bottom: 33px;
+    margin-bottom: 29px;
     vertical-align: middle;
 }
 
@@ -520,7 +547,7 @@ mark {
 }
 
 .b-deside {
-    padding: 27px 0px 5px;
+    padding: 28px 0px 10px;
     position: relative;
 }
 
@@ -549,9 +576,8 @@ mark {
 .b-find {
     transform-origin: top right;
     transform: skewY(0deg);
-    height: 433px;
-    background-color: #fff;
-    margin-top: -10%;
+    background-color: transparent;
+    margin-top: -11%;
 }
 
 .b-find:before {
@@ -564,7 +590,7 @@ mark {
     background-size: cover;
     bottom: 0;
     width: 100%;
-    height: 434px;
+    height: 100%;
     z-index: -1;
 }
 
@@ -581,7 +607,7 @@ mark {
 }
 
 .b-find .b-about__text-wrap{
-    padding: 159px 21%;
+    padding: 174px 21% 142px;
     transform: skewY(0deg);
 }
 
@@ -606,7 +632,12 @@ mark {
         height: 349px;
     }
 
-    .main {
+    .main--desktop {
+        display: none;
+    }
+
+    .main--mobile {
+        display: block;
         left: -6px;
         top: -3px;
         height: 360px;
@@ -618,7 +649,7 @@ mark {
         margin-top: -115px;
         right: 3%;
         font-size: 14px;
-        line-height: 19px;
+        line-height: 17px;
     }
 
     .b-about .b-title {
@@ -667,15 +698,25 @@ mark {
     }
 
     .b-activity {
-        padding: 27px 0px 58px;
+        padding: 27px 0px 63px;
     }
 
     .b-activity .b-title {
-        margin-bottom: 5px;
+        margin-bottom: 9px;
+        letter-spacing: -0.1px;
     }
 
     .b-activity .b-text {
         line-height: 17px;
+    }
+
+    .b-activity .b-about__text-wrap {
+        margin-bottom: 25px;
+    }
+
+    .b-activity .b-title--small {
+        letter-spacing: normal;
+        margin-bottom: 3px;
     }
 
     .b-title--small {
@@ -711,13 +752,18 @@ mark {
         padding: 33px 0px 0px;
     }
 
+    .b-corporation:before {
+        margin-top: -476px;
+    }
+
     .b-corporation .b-about__text-wrap {
         margin-bottom: 98px;
         padding: 0% 4%;
     }
 
     .b-corporation .b-title {
-        margin-bottom: 10px;
+        margin-bottom: 9px;
+        letter-spacing: 0.4px;
     }
 
     .b-corporation .b-text {
@@ -729,20 +775,24 @@ mark {
         width: 100%;
     }
     .b-slider__wrap {
-        padding: 55px 14% 40px;
+        padding: 59px 14% 38px;
     }
 
     .b-policy {
-        padding: 58px 0px 26px;
+        padding: 58px 0px 38px;
     }
 
     .b-policy .b-text {
-        line-height: 18px;
+        line-height: 17.3px;
     }
 
     .b-policy .b-title {
         padding-top: 0px;
         margin-bottom: 13px;
+    }
+
+    .b-policy .b-about__text-wrap--second .b-text {
+        line-height: 20.5px;
     }
 
     .b-about__text-wrap--policy .b-title {
@@ -768,11 +818,17 @@ mark {
     }
 
     .b-deside {
-        padding: 27px 0px 54px;
+        padding: 27px 0px 7px;
+    }
+
+    .b-deside .b-text {
+        padding-left: 3px;
+        line-height: 17px;
     }
 
     .b-deside:before {
-        background-size: contain;
+        background-size: 130% 44%;
+        top: -29px;
     }
 
     .b-deside .b-title--blue {
@@ -780,8 +836,8 @@ mark {
     }
 
     .b-deside .b-about__text-wrap {
-        margin-bottom: 56px;
-        padding: 0% 15%;
+        margin-bottom: 61px;
+        padding: 0% 17%;
     }
 
     .b-icon__wrap--deside {
@@ -789,7 +845,7 @@ mark {
         display: inline-block;
         text-align: left;
         padding: 0px 20px 0px 0px;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
     }
 
     .b-deside .b-title--small {
@@ -816,8 +872,12 @@ mark {
         padding: 0px 0px 0px 25px;
     }
 
+    .b-find {
+        margin-top: -14%;
+    }
+
     .b-find .b-about__text-wrap {
-        padding: 54px 13%;
+        padding: 61px 13% 17px;
         transform: skewY(0deg);
     }
 
@@ -825,16 +885,12 @@ mark {
         background: url(image/630.png) no-repeat;
     }
 
-    .b-find {
-        transform-origin: top right;
-        transform: skewY(0deg);
-        height: 221px;
-        background-color: #fff;
-        margin-top: -16%;
-    }
-
     .b-find .b-title {
         padding-top: 25px;
-        margin-bottom: 0px;
+        margin-bottom: 2px;
+    }
+
+    .b-find .b-text {
+        line-height: 21px;
     }
 }
